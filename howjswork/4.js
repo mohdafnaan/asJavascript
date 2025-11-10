@@ -1,11 +1,9 @@
-// call back hell 
+// call back hell
 
 // function getData(dataId){
 //     console.log("data" ,   dataId);
 // }
 // getData(1);// we will get data 1 as the output ;
-
-
 
 // level 2 :
 
@@ -17,9 +15,6 @@
 // getData(1);
 // getData(2);
 // getData(3);
-
-
-
 
 // level 3:
 
@@ -35,12 +30,7 @@
 //     getData(2)
 // })
 
-
-
-
-
-
-// normal callback function 
+// normal callback function
 
 // function greet(name,callback){
 //     console.log(`hi my name is ${name}`);
@@ -53,9 +43,6 @@
 // }
 
 // greet("afnaan",callMe);
-
-
-
 
 // callback function with setTimeout
 
@@ -70,8 +57,6 @@
 //     greet();
 // },2000)
 
-
-
 // function takeName(name,greet){
 
 //         console.log(`hi ${name}.`);
@@ -81,8 +66,6 @@
 //     console.log(`assalamualaikum`);
 // }
 // takeName("afnaan", doSalam)
-
-
 
 // function takeName(name,greet){
 //     console.log(`hi ${name} bro.`);
@@ -96,25 +79,28 @@
 
 // takeName("afnaan",askWater);
 
-
-
 // function sayName(x){
 //    return  x;
 // }
 // let a = sayName("afnaan");
 // console.log(a);
 
-
-
-
-function sayName(x,y){
-    console.log(`i am ${x}`);
-    y();
+function sayName(x, y) {
+  console.log(`i am ${x}`);
+  y();
 }
-function greet(x){
-console.log(`${x}how are you?`);
+function greet() {
+  console.log(`how are you?`);
 }
 
-sayName("afnaan",greet)
+// sayName("afnaan",greet)
 
-// setTimeout(sayName, 2000,"afnaan", gree`t);
+// setTimeout(sayName, 2000,"afnaan", greet);
+
+function hello() {
+  sayName("Afnaan", greet);
+}
+
+// hello()
+
+setTimeout(() => sayName("Afnaan", greet), 3000);
